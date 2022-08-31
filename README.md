@@ -1,1 +1,6 @@
-#YOU'LL GET NEW LIVE CLASSES TRHOUGH NOTIFICATION
+#include <stdio.h>
+
+int main() {
+  printf("Hello World!");
+  return 0;
+}
