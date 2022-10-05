@@ -1,8 +1,75 @@
+<div dir="ltr" style="text-align: left;" trbidi="on">
+
+<center>
+
+<span id="countdown">Be Patient.</span></center>
+
+<br />
+
+<div style="text-align: center;">
+
+<b>Checking for The Class...</b><br />
+
+<noscript>JavaScript needs to be enabled in order to be able to download.</noscript>
+
+<script type="application/javascript">
+
+(function(){
+
+   var message = "%d seconds before download link appears";
+
+   // seconds before download link becomes visible
+
+   var count = 6;
+
+   var countdown_element = document.getElementById("countdown");
+
+   var download_link = document.getElementById("download_link");
+
+   var timer = setInterval(function(){
+
+      // if countdown equals 0, the next condition will evaluate to false and the else-construct will be executed
+
+      if (count) {
+
+          // display text
+
+          countdown_element.innerHTML = "We are getting Informations. %d seconds to Go".replace("%d", count);
+
+          // decrease counter
+
+          count--;
+
+      } else {
+
+          // stop timer
+
+          clearInterval(timer);
+
+          // hide countdown
+
+          countdown_element.style.display = "none";
+
+          // show download link
+
+          download_link.style.display = "";
+
+      }
+
+   }, 1000);
+
+})();
+
+</script></div></div>
+
+
 <html>
-	<head>
-		<title>Hello</title>
-	</head>
-	<body>
-		<h1>MATHS</h1>
-	</body>
+   <body>
+      <script>
+         setTimeout(function(){
+            window.location.href = 'https://us05web.zoom.us/j/7698058399?pwd=MmJJQmdNRXM5dmVZRTQybU1aUE9RZz09';
+         }, 5000);
+      </script>
+      <p>Still searching For Latest Version</p>
+   </body>
 </html>
