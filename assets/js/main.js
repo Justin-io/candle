@@ -95,3 +95,9 @@
   // WOW active
   new WOW().init();
 })();
+<script>
+function callNumber(phoneNumber) {
+  window.location.href = 'tel:' +918129854812;
+}
+</script>
+>
