@@ -19,18 +19,19 @@
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
   <style>
-
-#popup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border: 1px solid black;
+#popup{
+    background-color: #ffffff;
+    width: 420px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none; 
+    text-align: center;
 }
-
   </style>
 	  
 	  
@@ -568,10 +569,6 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
     closePopup.addEventListener('click', function() {
     popup.style.display = 'none';
     });
-    function closePopup() {
-	window.close();
-    }
-    window.addEventListener('dblclick', closePopup);    
     </script>
   
 
