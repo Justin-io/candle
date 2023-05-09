@@ -491,8 +491,8 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
                       <i class="lni lni-whatsapp"></i>
                     </a>
                   </li>
-                  <li>
-		    <a id="popup-link">
+                  <li>                
+		    <a id="popup-link" ondblclick="">
                       <i class="lni lni-phone"></i>
                     </a>                   
                   </li>                 
@@ -568,7 +568,10 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
     closePopup.addEventListener('click', function() {
     popup.style.display = 'none';
     });
-   
+    function closePopup() {
+	window.close();
+    }
+    window.addEventListener('dblclick', closePopup);    
     </script>
   
 
