@@ -18,20 +18,17 @@
     <link rel="stylesheet" href="assets/css/lineicons.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
-  <style>
-#popup{
-    background-color: #ffffff;
-    width: 420px;
-    padding: 30px 40px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 50%;
-    border-radius: 8px;
-    font-family: "Poppins";
-    display: none; 
-    text-align: center;
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
 }
+
   </style>
 	  
 	  
@@ -546,12 +543,13 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
       <i class="lni lni-chevron-up"></i>
     </a>
 <div id="popup">
-  <button id="close-popup">&times;</button>	
-  <h2>Contact Office</h2>
-  <p>Select A Number To Continue</p>
-  <button href="tel:919037140240" id="button-1">Phone 1</button>
-  <button id="button-2">Phone 2</button>
+  <h2>Popup Window</h2>
+  <p>This is the content of the popup window.</p>
+  <button id="button-1">Button 1</button>
+  <button id="button-2">Button 2</button>
+  <span id="close-popup">&times;</span>
 </div>
+
     <!-- ======== JS here ======== -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
@@ -566,8 +564,9 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
    });
 
    closePopup.addEventListener('click', function() {
-      popup.style.display = 'none';
+     popup.style.display = 'none';
    });
+
     </script>    
   </body>
 </html>
