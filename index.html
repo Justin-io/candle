@@ -476,15 +476,10 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
                     </a>
                   </li>
                   <li>
-                    <a href="javascript:void(0)" onclick="callNumber('+919037140240')">
+                    <a href="javascript:void(0)" onclick="document.getElementById('contact').style.display='block'">
                       <i class="lni lni-phone"></i>
                     </a>                   
-                  </li>
-                   <li>
-                   <a href="javascript:void(0)" onclick="callNumber1('+919037240140')">
-                      <i class="lni lni-phone"></i>
-                    </a>
-                  </li>                            
+                  </li>                 
                 </ul>
               </div>
             </div>
@@ -538,14 +533,22 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-    function callNumber(phonenumber) {
-    window.location.href = 'tel:' +919037140240;
-    }  
-    function callNumber1(phonenumber) {
-    window.location.href = 'tel:' +919037240140;
-    } 
-</script>
->                               
+   
+  
+<!-- Subscribe Modal -->
+<div id="contact">
+  <div  style="padding:32px">
+    <div>
+      <i onclick="document.getElementById('contact').style.display='none'" ></i>
+      <h2 class="w3-wide">Click Here To Proceed</h2>
+      <p>Contact To Office</p>
+	<a href="tel:919037240140"><button type="button" onclick="document.getElementById('subscribe').style.display='none'">Phone-1</button></a><br />
+	<h6>Try With</h6>
+	 <a href="tel:919037140240" ><button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" >Phone-2</button></a>
+    </div> 
+  </div>
+</div>
+    
+    
   </body>
 </html>
