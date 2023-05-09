@@ -19,54 +19,18 @@
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
   <style>
-.popup{	  
-    background-color: #ffffff;
-    width: 420px;
-    padding: 30px 40px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 50%;
-    border-radius: 8px;
-    display: none;
-    font-family: “Poppins”,sans-serif;
-    text-align: center;
- }
-.popup button{	 
-    display: block;
-    margin:  0 0 20px auto;
-    background-color: transparent;
-    font-size: 30px;
-    color: #ffffff;
-    background: #03549a;
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
-    border: none;
-    outline: none;
-    cursor: pointer;
+
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
 }
-.popup h2{	  
-   margin-top: -20px;
-}
-.popup p{
-    font-size: 14px;
-    text-align: justify;
-    margin: 20px 0;
-    line-height: 25px;
-}
-a{	  
-    display: block;
-    width: 150px;
-    position: relative;
-    margin: 10px auto;
-    text-align: center;
-    background-color: #0f72e5;
-    border-radius: 20px;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 8px 0;
-}
+
   </style>
 	  
 	  
@@ -528,7 +492,7 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
                     </a>
                   </li>
                   <li>
-		  <a onclick="document.getElementById('subscribe').style.display='block'">
+		    <a href="#" id="popup-link">Click here to open popup</a>
                       <i class="lni lni-phone"></i>
                     </a>                   
                   </li>                 
@@ -580,23 +544,31 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
     <a href="#" class="scroll-top btn-hover">
       <i class="lni lni-chevron-up"></i>
     </a>
+<div id="popup">
+  <h2>Popup Window</h2>
+  <p>This is the content of the popup window.</p>
+  <button id="button-1">Button 1</button>
+  <button id="button-2">Button 2</button>
+  <span id="close-popup">X</span>
+</div>
 
     <!-- ======== JS here ======== -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-    window.addEventListener(“load”, function(){
-    setTimeout(
-        function open(event){
-            document.querySelector(“.popup”).style.display = “block”;
-    },
-    1000 
-    )
+    var popupLink = document.getElementById('popup-link');
+    var popup = document.getElementById('popup');
+    var closePopup = document.getElementById('close-popup');
+
+    popupLink.addEventListener('click', function() {
+    popup.style.display = 'block';
     });
-    document.querySelector(“#close”).addEventListener(“click”, function(){
-    document.querySelector(“.popup”).style.display = “none”;
-    });    
+
+    closePopup.addEventListener('click', function() {
+    popup.style.display = 'none';
+    });
+   
     </script>
   
 
