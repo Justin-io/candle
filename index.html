@@ -530,11 +530,10 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
       <i class="lni lni-chevron-up"></i>
     </a>
     <div class="popup">
-        <button class="popup-close">&times;</button>
-        <h2 class="popup-h2">Contact Office</h2>
-        <p class="popup-p">Please Choose A Number To Proceed. If You Are Unable To Connect Using One Number, Please Try With The Other Number</p>
-        <a class="popup-a" href="jvascript:void(0)" onclick="window.open('tel:919037140240');">Phone 1</a>
-        <a class="popup-a">Phone 2</a>
+        <button id="popup-close">&times;</button>
+        <h2>Contact Office</h2>
+        <p>Please Choose A Number To Proceed. If You Are Unable To Connect Using One Number, Please Try With The Other Number</p>
+        <a id="popup-a">Phone 1</a> <a id="popup-a">Phone 2</a>
     </div>
 	  <! === JS here ======== -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -551,7 +550,7 @@ window.addEventListener("click", function(){
 });
 
 
-document.querySelector(".popup-close").addEventListener("click", function(){
+document.querySelector("#popup-close").addEventListener("click", function(){
     document.querySelector(".popup").style.display = "none";
 });
     </script>   
