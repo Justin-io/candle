@@ -2195,6 +2195,7 @@ p {
     color: #ffffff;
     text-decoration: none;
     padding: 8px 0;
+    cursor: pointer;
 }
 .popup-close{
     display: block;
