@@ -530,13 +530,14 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
       <i class="lni lni-chevron-up"></i>
     </a>
 
-    <div id="popup">
-        <button id="close">&times;</button>
-        <h2>Contact Office</h2>
-        <p>
+    <div><button class="popupbutt" id="butt">&times;</button></div>
+    <div class="popup">
+        <button class="popupbutt" id="close">&times;</button>
+        <h2 class="popuph2">Contact Office</h2>
+        <p class="popupp">
             Please Choose A Number To Proceed. If You Are Unable To Connect Using One Number, Please Try With The Other Number        </p>
-        <a class="link-popup"  href="tel:919037140240"> Phone 1 </a>
-        <a class="link-popup"  href="tel:919037240140"> Phone 2 </a>
+        <a class="popuplink"  href="tel:919037140240">Phone 1Phone 1 </a>
+        <a class="popuplink"  href="tel:919037240140">Phone 2</a>
     </div>	  
 	  
 	  
@@ -544,11 +545,15 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
-   <script type="text/javascript">
+    <script type="text/javascript">
+document.querySelector("#butt").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "block";
+});
 
-	   
-	   
-	   
-    </script>  
+
+document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+});
+    </script>
   </body>
 </html>
