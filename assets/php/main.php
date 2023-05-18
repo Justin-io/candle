@@ -1,15 +1,14 @@
 
 <?php
 // define variables and set to empty values
-$name = $email = $gender = $comment = $website = "";
-
+$subs-phoneErr = "";
+$website = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = test_input($_POST["name"]);
-  $email = test_input($_POST["email"]);
-  $website = test_input($_POST["website"]);
-  $comment = test_input($_POST["comment"]);
-  $gender = test_input($_POST["gender"]);
-}
+  if (empty($_POST["subs-phone"])) {
+    $subs-phoneErr = "phone with whatsapp is required";
+  } else {
+    $subs-phone = test_input($_POST["subs-phone"]);
+  }
 
 function test_input($data) {
   $data = trim($data);
