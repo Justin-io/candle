@@ -23,6 +23,25 @@
 </style>
  </head>
   <body>
+<?php
+// define variables and set to empty values
+$phoneErr = "";
+$phone = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["phone"])) {
+    $subs-phoneErr = "phone number with whatsapp is required";
+  } else {
+    $phone = test_input($_POST["phone"]);
+  }
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
     <!--[if lte IE 9]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -428,11 +447,9 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
               </div>
             </div>
             <div class="col-xl-6 col-lg-5">
-              <form name="subs-phone" class="subscribe-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+              <form name="phone" class="subscribe-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                 <input
                   type="tel"
-                  name="subs-phone"
-                  id="subs-phone"
                   placeholder="Your 10 Digit No.(eg:-9878767656)"
 		  pattern="[0-9]{10}"
 		  required
