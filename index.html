@@ -29,7 +29,7 @@ $phoneErr = "";
 $phone = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["phone"])) {
-    $subs-phoneErr = "phone number with whatsapp is required";
+    $phoneErr = "phone number with whatsapp is required";
   } else {
     $phone = test_input($_POST["phone"]);
   }
@@ -450,7 +450,7 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
               <form name="phone" class="subscribe-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                 <input
                   type="tel"
-                  placeholder="Your 10 Digit No.(eg:-9878767656)"
+                  placeholder="Your 10 Digit No(eg:9878767656)"
 		  pattern="[0-9]{10}"
 		  required
                 />
