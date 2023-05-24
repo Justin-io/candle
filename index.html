@@ -37,16 +37,31 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Retrieve form data
+$name = $_POST['phone'];
+
+// Prepare and execute the SQL query
+$sql = "INSERT INTO candle (phone) VALUES (?)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ss", $phone);
+
+if ($stmt->execute()) {
+    // Data inserted successfully
+    header('Location: thank_you.html');
+    exit();
+} else {
+    // Error inserting data
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
 // Example query
 $sql = "SELECT * FROM candle";
 $result = $conn->query($sql);
 
-// Process the result or perform other database operations
-
 // Close the connection
+$stmt->close();
 $conn->close();
-// Close the connection
-// Close the connection
+
 
 // define variables and set to empty values
 $phoneErr = "";
