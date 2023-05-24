@@ -24,6 +24,30 @@
  </head>
   <body>
 <?php
+$servername = "localhost";
+$username = "muhsin";
+$password = "Bsnl@3237";
+$database = "candle";
+
+// Create connection
+$conn = new mysqli($localhost, $muhsin, $Bsnl@3237, $candle);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Example query
+$sql = "SELECT * FROM candle";
+$result = $conn->query($sql);
+
+// Process the result or perform other database operations
+
+// Close the connection
+$conn->close();
+// Close the connection
+// Close the connection
+
 // define variables and set to empty values
 $phoneErr = "";
 $phone = "";
