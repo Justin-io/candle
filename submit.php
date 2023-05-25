@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     file_put_contents('form_data.txt', $data, FILE_APPEND | LOCK_EX);
 
     // Redirect the user to a thank-you page or display a success message
-    header('Location: thank_you.html');
+    header('Location: assets/thank_you.html');
     exit();
 }
 ?>
