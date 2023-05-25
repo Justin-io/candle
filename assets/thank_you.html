@@ -138,24 +138,12 @@ function test_input($data) {
               <div class="section-title mb-15">
                 <h2 class="text-white mb-25">Join Our Broadcast Group</h2>
                 <p class="text-white pr-5">
-                  Enter Your Whatsapp Number To Join Our Broadcast Group And Know More
-                </p>
+		You Have SuccessFully Submitted The Following Datas
+		</p>
               </div>
             </div>
             <div class="col-xl-6 col-lg-5">
-              <form name="phone" class="subscribe-form" method="post" action="submit.php">
-                <input
-		  id="subs-phone"
-                  type="tel"
-                  placeholder="Your 10 Digit No(eg:9037140240)"
-		  pattern="[0-9]{10}"
-		  required
-                />
-                <button type="submit" class="main-btn btn-hover">
-                  Subscribe
-                </button>
-	         <input type="submit" value="Submit">
-              </form>
+<?php echo $phone; ?>
             </div>
           </div>
         </div>
