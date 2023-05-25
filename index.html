@@ -33,14 +33,39 @@
 
 
 // define variables and set to empty values
-$phoneErr = "";
-$phone = "";
+$nameErr = $mailErr = $phoneErr = "";
+$name = $mail = $phone = $feedback = "";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["phone"])) {
-    $phoneErr = "phone number with whatsapp is required";
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
   } else {
-    $phone = test_input($_POST["phone"]);
+    $name = test_input($_POST["name"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed";
+    }
   }
+  
+  if (empty($_POST["mail"])) {
+    $emailErr = "Email is required";
+  } else {
+    $mail = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+      $mailErr = "Invalid email format";
+    }
+  }
+    
+  }
+
+  if (empty($_POST["feedback"])) {
+    $comment = "";
+  } else {
+    $comment = test_input($_POST["feedback"]);
+  }
+
+}
 
 function test_input($data) {
   $data = trim($data);
