@@ -21,25 +21,44 @@ $txt = "You have a email from ".$name.".\n\n\n"."the suggestion from".$name."is"
 
 
 
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
+$nameErr = $mailErr = $phoneErr = "";
+$name = $mail = $phone = $feedback = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
-    $nameErr = "Name Is Required";
+    $nameErr = "Name is required";
   } else {
     $name = test_input($_POST["name"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed";
+    }
   }
-
+  
   if (empty($_POST["mail"])) {
-    $emailErr = "Email Is Required";
+    $emailErr = "Email is required";
   } else {
-    $email = test_input($_POST["email"]);
+    $mail = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+      $mailErr = "Invalid email format";
+    }
+  }
+    
   }
 
-  if (empty($_POST["phone"])) {
-    $website = "Phone Is Required";
+  if (empty($_POST["feedback"])) {
+    $comment = "";
   } else {
-    $website = test_input($_POST["phone"]);
+    $comment = test_input($_POST["feedback"]);
   }
+
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 ?>
