@@ -21,7 +21,7 @@ $txt = "You have a email from ".$name.".\n\n\n"."the suggestion from".$name."is"
 
 
 
-$nameErr = $mailErr = $phoneErr = "";
+$nameErr = $mailErr = "";
 $name = $mail = $phone = $feedback = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
