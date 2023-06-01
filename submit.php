@@ -1,22 +1,22 @@
 <?php
-if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
-    $mailFrom = $_POST['mail']
-    $feedback = $_POST['feedback'];
-    $subject = "Phone Number"
+if (isset($_POST['submit-1'])) {
+    $name = $_POST['name-1'];
+    $phone = $_POST['phone-1'];
+    $mailFrom = $_POST['mail-1']
+    $feedback = $_POST['feedback-1'];
+    $subject = $_POST['subject-1'];
     // Here, you can perform additional processing or validation with the submitted data
 $mailTo = "get.contact.candle@gmail.com";
 $headers = "From: ".$mailFrom;
-$txt = "You have a email from ".$name.".\n\n\n"."the suggestion from".$name."is".$feedback;
+$txt = "You have a email from ".$name-1.".\n\n\n"."the suggestion from".$name-1."is".$feedback-1;
     
-    mail($mailTo, $subject, $txt, $headers);
+    mail($mailTo, $subject-1, $txt, $headers);
     // Redirect the user to a thank-you page or display a success message
     header('Location: assets/thank_you.html');
     exit();
 }
 // Save the data to a file or database
-    $data = "Name: $name\nPhone: $phone\nfeedback: $feedback\n";
+    $data = "Name: $name-1\nPhone: $phone-1\nfeedback: $feedback-1\n";
     file_put_contents('form_data.txt', $data, FILE_APPEND | LOCK_EX);
 
 
