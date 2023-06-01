@@ -57,7 +57,7 @@
 $nameErr = $mailErr = "";
 $name = $mail = $phone = $feedback = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST['submit'])) {
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
   } else {
