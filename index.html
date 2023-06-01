@@ -56,35 +56,35 @@
 
 // define variables and set to empty values
 $nameErr = $mailErr = "";
-$name = $mail = $phone = $feedback = "";
+$name_1 = $mail_1 = $phone_1 = $feedback_1 = "";
 
-if (isset($_POST['submit'])) {
-  if (empty($_POST["name"])) {
+if (isset($_POST['submit_1'])) {
+  if (empty($_POST["name_1"])) {
     $nameErr = "Name is required";
   } else {
-    $name = test_input($_POST["name"]);
+    $name_1 = test_input($_POST["name_1"]);
     // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$name_1)) {
       $nameErr = "Only letters and white space allowed";
     }
   }
 
-  if (empty($_POST["mail"])) {
+  if (empty($_POST["mail_1"])) {
     $emailErr = "Email is required";
   } else {
-    $mail = test_input($_POST["email"]);
+    $mail_1 = test_input($_POST["mail_1"]);
     // check if e-mail address is well-formed
-    if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($mail_1, FILTER_VALIDATE_EMAIL)) {
       $mailErr = "Invalid email format";
     }
   }
 
   }
 
-  if (empty($_POST["feedback"])) {
+  if (empty($_POST["feedback_1"])) {
     $comment = "";
   } else {
-    $comment = test_input($_POST["feedback"]);
+    $comment = test_input($_POST["feedback_1"]);
   }
 
 }
@@ -504,7 +504,7 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
             <div class="col-xl-6 col-lg-5">
               <form  class="subscribe-form" method="post" action="submit.php">
                 <input
-		  name="phone"
+		  name="phone_1"
 		  id="subs-phone"
                   type="tel"
                   placeholder="Your 10 Digit No(eg:9037140240)"
@@ -516,7 +516,7 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
 		<input
 		  placeholder="Enter Your Name"
 		  type="text"
-		  name="name"
+		  name="name_1"
 		  required
 		/>
   	  <span class="error"><br />
@@ -524,13 +524,20 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
   
 		<input 
 		  type="text" 
-		  name="mail"
+		  name="mail_1"
 		  placeholder="Enter Your Email" 
 		  required
 	        />
  	   <span class="error"><br />
 	   <?php echo $mailErr; ?></span>
+	        <input 
+		  name="subject_1"
+		  type="textarea" 
+		  placeholder="To Contact Office"    
+		  readonly
+	        />	      
 		<input 
+		  name="feedback_1"
 		  type="textarea" 
 		  placeholder="Enter Your Feedback Or Suggestion (optional)"     
 	        />
