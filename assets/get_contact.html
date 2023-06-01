@@ -51,33 +51,6 @@ txt-area-sbcrb-form {
 }
 </style>
  </head>
-  <body>
-<?php
-  $servername = "localhost";
-  $username = "muhsin";
-  $password = "Bsnl@3237";
-  $database = "candle";
-// Create connection
-  $conn = new mysqli($localhost, $muhsin, $Bsnl@3237, $candle);
-
-
-// define variables and set to empty values
-$phoneErr = "";
-$phone = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["phone"])) {
-    $phoneErr = "phone number with whatsapp is required";
-  } else {
-    $phone = test_input($_POST["phone"]);
-  }
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-?>
 
     <!--[if lte IE 9]>
       <p class="browserupgrade">
