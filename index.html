@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 <style>
 	
-.main-btn- {
+.btn-continue {
   display: inline-block;
   font-weight: 700;
   text-align: center;
@@ -50,6 +50,32 @@ label{
   color: #fff;
 }
 
+.btn-continue span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn-continue span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn-continue:hover span {
+  padding-right: 25px;
+}
+
+.btn-continue:hover span:after {
+  opacity: 1;
+  right: 0;
+	
+	
+	
 </style>
  </head>
   <body>
@@ -550,7 +576,7 @@ Discover The Best +1 And +2 Entrance Exam-Focused Tuition At Candle Institute Of
 		   <br />
 	    </div>
 		
-                <button type="submit" value="Submit" class="main-btn- btn-hover">
+                <button  class="main-btn- btn-continue">
                   Submit Now
                 </button>
 	      </form>
